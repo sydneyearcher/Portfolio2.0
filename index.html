@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Syd's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<!--HERO SECTION TYPEWRITER-->
+
+<body>
+    <section class="hero">
+        <div class="hero-container">
+            <h1>I'm a <span class="auto-type"></span></h1>
+        </div>
+    </section>
+
+
+    <div class="slider-container">
+        <div class="slide">
+            <div class="item" style="background-image: url('./imgs/download (35).jpg');">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur elit. Abm eum!</div>
+                    <button>See more</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url('./imgs/download (35).jpg');">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur elit. Abm eum!</div>
+                    <button>See more</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url('./imgs/download (35).jpg');">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur elit. Abm eum!</div>
+                    <button>See more</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url('./imgs/download (35).jpg');">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur elit. Abm eum!</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <!--typewritter effect-->
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Strategist", "Creative", "Web Designer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
