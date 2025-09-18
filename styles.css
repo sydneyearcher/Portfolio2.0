@@ -26,11 +26,16 @@ make body white (#fff) so hero + slider match seamlessly.*/
 
 h1 {
   color: #020412;
-  font-size: clamp(2rem, 5vw, 75px); /* scales between 2rem and 75px */
+  font-size: clamp(3rem, 6vw, 100px); /* scales between 2rem and 75px */
   text-align: center; /* center text on small screens */
   padding: 0 10px;
 }
 
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 120px;
+  }
+}
 
 span{
   color: #E36397;
@@ -131,7 +136,7 @@ body{
   left: 100px;
   width: 300px;
   text-align: left;
-  color: #eee;
+  color: #E36397;
   transform: translate(0,-50%);
   font-family: system-ui;
   display: none;
@@ -200,4 +205,131 @@ body{
   background: #ababab;
   color: #fff;
 
+}
+
+/*for the nav bar*/
+.nav-bar{
+  box-sizing: border-box;
+  font-family: 'Urbanist', sans-serif;
+   width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+a:hover{
+  color:#E36397;
+}
+
+header{
+  position: relative;
+  padding: 0 2rem;
+}
+
+.nav-bar .logo a{
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.nav-bar .links{
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-bar .toggle_btn{
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn{
+  background-color: #E36397;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+/*DROPDOWN MENU*/
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width:300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+height: 240px;
+}
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*responsiveness*/
+
+@media (max-width: 992px){
+  .nav-bar .links,
+  .nav-bar .action_btn{
+    display: none;
+  }
+
+  .nav-bar .toggle_btn{
+    display: block;
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+}
+
+@media (max-width: 576px){
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
+  }
 }
